@@ -1,0 +1,427 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background for the whole page */
+    color: #333;
+    line-height: 1.6;
+    /* This padding-top is now handled directly in dashboard.html's <style> block for direct control */
+}
+
+.container {
+    max-width: 1140px; /* Wider container for more content */
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* --- Header Styles --- */
+.navbar {
+    background-color: #007bff; /* Primary blue for navbar */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15px; /* Added for alignment */
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* For horizontal navigation */
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+
+/* --- Authentication Forms (Login/Register) --- */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start for better form positioning */
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+    padding: 20px 0;
+    background-color: #e9ecef; /* Light grey background for auth section */
+}
+
+.auth-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 25px;
+    color: #007bff;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels/inputs to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.auth-card p {
+    margin-top: 20px;
+    color: #666;
+}
+
+.auth-card p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-card p a:hover {
+    text-decoration: underline;
+}
+
+/* --- Dashboard General Styles --- */
+.dashboard-header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dashboard-header h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Common Section Styling */
+.profile-section, .market-overview-section, .portfolio-section, .stocks-section, .transaction-history-section { /* Added .transaction-history-section */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px; /* Add margin for spacing between sections */
+}
+
+/* NEW STYLE: For blue card headers */
+.card-header.header-blue {
+    background-color: #007bff; /* The primary blue from buttons */
+    color: #fff; /* White text for contrast */
+    border-bottom: none; /* Remove default border if desired */
+    /* Ensure title inside also gets white color */
+}
+
+/* Ensure h2 inside the blue header is white */
+.card-header.header-blue h2 {
+    color: #fff;
+    border-bottom: none; /* Remove border if it conflicts */
+    padding-bottom: 0; /* Adjust padding if needed */
+}
+
+
+.profile-section h2, .market-overview-section h2, .portfolio-section h2, .stocks-section h2 {
+    color: #343a40;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #495057;
+}
+
+.profile-info p strong {
+    color: #007bff;
+    margin-right: 8px;
+}
+
+/* Market Overview specific */
+.market-overview-section .market-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.market-overview-section .market-card h3 {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 8px;
+}
+.market-overview-section .market-card p {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+.market-overview-section .market-card ul {
+    list-style: none;
+    padding: 0;
+}
+.market-overview-section .market-card ul li {
+    margin-bottom: 5px;
+}
+.market-overview-section .market-card ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+.market-overview-section .market-card ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Tables Styling (Portfolio and Stocks) */
+.table-responsive {
+    overflow-x: auto; /* Ensures tables are scrollable on small screens */
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: bold;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.text-success { color: #28a745 !important; font-weight: bold; }
+.text-danger { color: #dc3545 !important; font-weight: bold; }
+.text-warning { color: #ffc107 !important; font-weight: bold; }
+.text-info { color: #17a2b8 !important; font-weight: bold; }
+.text-muted { color: #6c757d !important; }
+.text-center { text-align: center !important; }
+.text-end { text-align: end !important; }
+
+
+/* --- Custom Alert System --- */
+#alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050; /* Ensure it's above most elements */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between multiple alerts */
+}
+
+.custom-alert {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 280px;
+    max-width: 350px;
+    opacity: 0; /* Start hidden for fade-in */
+    transform: translateY(-20px); /* Start slightly above for slide-down effect */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Smooth transition */
+}
+
+.custom-alert.alert-success {
+    border-left: 5px solid #28a745; /* Green */
+    color: #218838;
+}
+
+.custom-alert.alert-danger {
+    border-left: 5px solid #dc3545; /* Red */
+    color: #c82333;
+}
+
+.custom-alert.alert-warning {
+    border-left: 5px solid #ffc107; /* Orange */
+    color: #e0a800;
+}
+
+.custom-alert.alert-info {
+    border-left: 5px solid #17a2b8; /* Blue-green */
+    color: #117a8b;
+}
+
+.custom-alert span {
+    flex-grow: 1;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.alert-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #6c757d; /* Grey color for consistency */
+    transition: color 0.2s ease;
+    padding: 0; /* Remove default padding */
+    line-height: 1; /* Align SVG icon vertically */
+}
+
+.alert-close-btn:hover {
+    color: #343a40;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) { /* Adjust breakpoint for larger dashboards */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .auth-card {
+        margin: 20px; /* Add margin on smaller screens */
+        padding: 25px;
+    }
+
+    .custom-alert {
+        max-width: 90%; /* Adjust alert width for smaller screens */
+        right: 10px;
+        left: 10px; /* Center alerts better */
+        top: 10px;
+    }
+    .profile-section, .market-overview-section, .portfolio-section, .stocks-section, .transaction-history-section { /* Added .transaction-history-section */
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    .table th, .table td {
+        padding: 0.5rem; /* Smaller padding for table cells */
+        font-size: 0.9rem;
+    }
+}
+/* For spacing between dynamically added market cards */
+.market-card + .market-card {
+    margin-top: 20px;
+}
+/* Style for individual stock items in market overview */
+.market-stock-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e0e0e0;
+}
+.market-stock-item:last-child {
+    border-bottom: none;
+}
+.market-stock-item span:first-child {
+    font-weight: bold;
+}
